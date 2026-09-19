@@ -14,7 +14,10 @@ st.title("SuperKart Retail Sales Forecasting")
 st.markdown("Predict total product sales across store locations using the trained XGBoost model.")
 
 # Define backend API URL (Uses Docker network alias or local fallback)
-BACKEND_URL = os.getenv("BACKEND_URL", "http://backend:5000/predict")
+BACKEND_URL = os.getenv("BACKEND_URL", 
+# "http://backend:5000/predict"
+"http://superkart-backend-container:5000/predict"
+)
 
 # Navigation sidebar
 st.sidebar.header("Navigation")
